@@ -149,3 +149,38 @@
 
 
 
+// variables & block scope
+
+// let age = 30;
+
+// if (true) {
+//     // let age = 40;
+//     let name = 'ati';
+//     console.log('inside 1st code block: ', age, name);
+
+//     if (true) {
+//         console.log('inside 2nd code block: ', age, name);
+//     }
+// }
+
+// console.log('outside code block: ', age, name);
+
+// same rules apply to const
+const age = 30;
+
+if (true) {
+    const age = 40;
+    const name = 'ati';
+    console.log('inside 1st code block: ', age, name);
+
+    if (true) {
+        const age = 50;
+        console.log('inside 2nd code block: ', age, name);
+
+        // var ignores block scope
+        var test = 'hello!!';
+    }
+}
+
+console.log('outside code block: ', age, name);
+console.log('outside code block: ', age, name, test);
